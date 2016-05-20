@@ -1,0 +1,57 @@
+/*
+Theme Name: WordCamp Demo
+Theme URI: https://github.com/ethanbutler/camp
+Author: Ethan Butler
+Author URI: https://github.com/ethanbutler
+Description: Demo using the
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: camp
+*/
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html[lang]{
+	margin: 0!important;
+}
+
+body {
+	background: #56a0d4;
+	margin: 0;
+}
+
+header {
+	height: 8em;
+	background: #333333;
+	text-align: center;
+	position: relative;
+}
+
+figure {
+	margin: 0;
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+h1 {
+	margin: 0;
+	color: #FFFFFF;
+}
+
+main {
+	background: #FFFFFF;
+	max-width: 970px;
+	margin: 0 auto;
+	padding: 1.5em;
+}
+
+/* =========================== */
+
+.respBg {
+
+}
