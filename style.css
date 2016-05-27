@@ -53,5 +53,14 @@ main {
 /* =========================== */
 
 .respBg {
+	opacity: 0;
+	transform: scale(1.1);
+	transition: all .4s ease-in-out;
+	/* not supported in all browsers */
+	mix-blend-mode: multiply;
+}
 
+.respBg--loaded {
+	transform: scale(1);
+	opacity: 1;
 }

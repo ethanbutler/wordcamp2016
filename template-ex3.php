@@ -1,7 +1,7 @@
 <?php get_template_part('header'); ?>
 	<body>
 		<header>
-			<figure class="respBg"
+			<figure class="respBg js-respBg--dayNite"
 							data-id="<?= get_the_ID(); ?>"
 							data-set="hero"
 			></figure>
