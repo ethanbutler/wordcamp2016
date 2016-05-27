@@ -21,15 +21,22 @@ html[lang]{
 }
 
 body {
-	background: #56a0d4;
+	background: #EEEEEE;
 	margin: 0;
+	font-family: 'Fira Code', monospace;;
 }
 
 header {
-	height: 8em;
-	background: #333333;
+	height: 20em;
+	background: linear-gradient( to right, rebeccapurple 0, orange 100% );
 	text-align: center;
 	position: relative;
+	overflow: hidden;
+}
+
+footer {
+	padding: 2em;
+	text-align: center;
 }
 
 figure {
@@ -41,6 +48,11 @@ figure {
 h1 {
 	margin: 0;
 	color: #FFFFFF;
+	position: relative;
+	z-index: 1;
+	position: absolute;
+	bottom: 2em;
+	right: 0; bottom: 1em; left: 0;
 }
 
 main {
@@ -53,9 +65,11 @@ main {
 /* =========================== */
 
 .respBg {
+	background-position: center;
+	background-size: cover;
 	opacity: 0;
-	transform: scale(1.1);
-	transition: all .4s ease-in-out;
+	transform: scale(1.05);
+	transition: all 2s ease-in-out;
 	/* not supported in all browsers */
 	mix-blend-mode: multiply;
 }

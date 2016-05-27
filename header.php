@@ -9,6 +9,8 @@
 	<?php endif; ?>
 	<?php wp_head(); ?>
   <link rel="stylesheet" href="<?= get_stylesheet_uri(); ?>">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="<?= get_stylesheet_directory_uri().'/js/main.js'; ?>"></script>
 </head>
 
 <body <?php body_class(); ?>>
