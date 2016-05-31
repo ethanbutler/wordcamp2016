@@ -1,5 +1,7 @@
-var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var connection = window.navigator.connection || window.navigator.mozConnection || window.navigator.webkitConnection;
 var type = connection ? connection.type : false;
+
+alert( type );
 
 //only run scripts if user is connected to wifi or not on a phone
 if( !type || type === 'wifi'){
@@ -91,4 +93,6 @@ if( !type || type === 'wifi'){
     } );
 
   } );
+} else {
+  alert( 'Certain site functionality has been limited because you are not connected to Wifi.' );
 }
