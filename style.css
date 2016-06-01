@@ -28,7 +28,7 @@ body {
 
 header {
 	height: 20em;
-	background: linear-gradient( to right, rebeccapurple 0, orange 100% );
+	background: linear-gradient(to left, #56a0d4 25%,#ff0084 75%);
 	text-align: center;
 	position: relative;
 	overflow: hidden;

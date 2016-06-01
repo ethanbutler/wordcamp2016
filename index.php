@@ -1,7 +1,11 @@
-<?php get_template_part('header'); ?>
+<?php
+get_template_part('header');
+global $post;
+setup_postdata( $post );
+?>
 	<body>
 		<header>
-			<figure class="respBg"
+			<figure class="respBg js-respBg"
 							data-id="<?= get_the_ID(); ?>"
 							data-set="hero"
 			></figure>

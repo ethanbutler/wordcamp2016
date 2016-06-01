@@ -1,10 +1,8 @@
-// var connection = window.navigator.connection || window.navigator.mozConnection || window.navigator.webkitConnection;
-// var type = connection ? connection.type : false;
-//
-// alert( type );
-//
-// //only run scripts if user is connected to wifi or not on a phone
-// if( !type || type === 'wifi'){
+var connection = window.navigator.connection || window.navigator.mozConnection || window.navigator.webkitConnection;
+var type = connection ? connection.type : false;
+
+//only run scripts if user is connected to wifi or not on a phone
+if( !type || type === 'wifi'){
   $(document).ready( function(){
 
     // we haven't established a breakpoint
@@ -52,6 +50,7 @@
           var _this = $(this);
           var id  = _this.attr( 'data-id' );
           var set = _this.attr( 'data-set' );
+          console.log( '/wp-json/v1/random/'+id+'/'+set+'/'+getBreakpoint() );
           $.get( '/wp-json/v1/random/'+id+'/'+set+'/'+getBreakpoint(), function( data ){
             setRespBg( _this, data );
           } );
@@ -90,6 +89,6 @@
     } );
 
   } );
-// } else {
-//   alert( 'Certain site functionality has been limited because you are not connected to Wifi.' );
-// }
+} else {
+  alert( 'Certain site functionality has been limited because you are not connected to Wifi.' );
+}
