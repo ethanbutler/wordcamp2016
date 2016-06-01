@@ -1,10 +1,10 @@
-var connection = window.navigator.connection || window.navigator.mozConnection || window.navigator.webkitConnection;
-var type = connection ? connection.type : false;
-
-alert( type );
-
-//only run scripts if user is connected to wifi or not on a phone
-if( !type || type === 'wifi'){
+// var connection = window.navigator.connection || window.navigator.mozConnection || window.navigator.webkitConnection;
+// var type = connection ? connection.type : false;
+//
+// alert( type );
+//
+// //only run scripts if user is connected to wifi or not on a phone
+// if( !type || type === 'wifi'){
   $(document).ready( function(){
 
     // we haven't established a breakpoint
@@ -50,12 +50,9 @@ if( !type || type === 'wifi'){
 
         $( '.js-respBg--rand' ).each( function(){
           var _this = $(this);
-          //var id  = _this.attr( 'data-img' );
-          var id =  _this.attr( 'data-id' );
+          var id  = _this.attr( 'data-id' );
           var set = _this.attr( 'data-set' );
-          //$.get( '/wp-json/v1/random/'+id+'/'+set+'/'+getBreakpoint(), function( data ){
-          $.get( '/wp-json/v2/random/'+id+'/'+set+'/'+getBreakpoint(), function( data ){
-            console.log( data );
+          $.get( '/wp-json/v1/random/'+id+'/'+set+'/'+getBreakpoint(), function( data ){
             setRespBg( _this, data );
           } );
         } );
@@ -84,8 +81,8 @@ if( !type || type === 'wifi'){
 
     // when light changes, call dayNight and update time
     window.addEventListener( 'devicelight', function(e) {
-      //console.log( e.value );
-      var _time = e.value < 30 ? 'nite' : 'day';
+      console.log( e.value );
+      var _time = e.value < 50 ? 'nite' : 'day';
       if( _time !== time ){
         dayNite( _time );
         time = _time;
@@ -93,6 +90,6 @@ if( !type || type === 'wifi'){
     } );
 
   } );
-} else {
-  alert( 'Certain site functionality has been limited because you are not connected to Wifi.' );
-}
+// } else {
+//   alert( 'Certain site functionality has been limited because you are not connected to Wifi.' );
+// }

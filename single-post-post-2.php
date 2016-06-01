@@ -10,8 +10,7 @@ setup_postdata( $post );
 				$img  = $imgs[array_rand( $imgs , 1 )];
 			?>
 			<figure class="respBg js-respBg--rand"
-							data-id="<?= get_the_ID(); ?>"
-							<?php /* data-img="<?= $img['ID']; ?>" */ ?>
+							data-id="<?= $img['ID']; ?>"
 							data-set="hero"
 			></figure>
 			<h1><?= get_the_title(); ?></h1>
